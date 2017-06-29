@@ -1,0 +1,3 @@
+rootProject.name = 'react_export_input_sample'
+
+include ':app'
