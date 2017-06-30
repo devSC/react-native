@@ -17,7 +17,7 @@ export default class setup extends Component {
     constructor(props) {
         super(props)
 
-        //初始化
+        //初始化类
         this.stu = new Student('小红', '女', 18);
         this.miStu = new MiStudent()
     }

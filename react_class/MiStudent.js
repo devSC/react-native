@@ -4,6 +4,7 @@
 
 import Student from './Student'
 
+//继承
 export default class MiStudent extends Student {
     constructor() {
         super('小米', '女', 16)
