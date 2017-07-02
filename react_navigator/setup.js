@@ -19,8 +19,8 @@ export default class setup extends Component {
             <NavigatorIOS
                 initialRoute={{
                     component: MyScene,
-                     // The title displayed in the navigation bar and the back button for this
-                     // route.
+                    // The title displayed in the navigation bar and the back button for this
+                    // route.
                     title: 'My initial scene',
                     passProps: {
                         //this title is define from the MyScene propTypes
@@ -75,7 +75,20 @@ class MyScene2 extends Component {
         this.props.navigator.pop()
     }
 
+    _handleNextPress(nextRoute) {
+        this.props.navigator.push(nextRoute);
+    }
+
     render() {
+        const nextRoute = {
+            component: MyScene2,
+            title: 'My Scene 2',
+            passProps: {
+                myProp: ' bar',
+                title: 'MyScene2'
+            },
+        };
+
         return <View>
             <Text
                 style={{marginTop: 64}}
@@ -84,6 +97,12 @@ class MyScene2 extends Component {
                 title="back"
                 onPress={() => {
                     this._handleBackPress()
+                }}
+            />
+            <Button
+                title="next scene"
+                onPress= {() => {
+                    this._handleNextPress(nextRoute);
                 }}
             />
         </View>
