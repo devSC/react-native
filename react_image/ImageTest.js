@@ -17,6 +17,10 @@ import {
  style={{width: 200, height: 100}}
  * */
 export default class ImageTest extends Component {
+    onTest() {
+        var a = 2, b = 3;
+        return a + b;
+    }
     render() {
         return <View>
             {/*使用本地图*/}
@@ -43,10 +47,16 @@ export default class ImageTest extends Component {
             {/*使用iOS项目中原生的图 安卓中只能使用draw able中图的资源*/}
             <Image
                 //cover', 'contain', 'stretch', 'center'
-                style={{width: 20, height: 20}}
+                style={{width: 120, height: 20}}
                 //直接使用原生图名
                 source={{url: 'new'}}
             />
+            <Text
+                style={{fontSize: 20}}
+                onPress={()=>{
+                    this.onTest();
+                }}
+            >点击</Text>
         </View>
     }
 }
