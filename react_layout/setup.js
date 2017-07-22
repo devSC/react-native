@@ -11,12 +11,14 @@ import {
     View
 } from 'react-native';
 import FlexBoxTest from './FlexBoxTest'
+import FlexBoxDice from './FlexBoxDice'
 
 export default class setup extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <FlexBoxTest/>
+                <FlexBoxDice/>
+                {/*<FlexBoxTest/>*/}
             </View>
         );
     }
