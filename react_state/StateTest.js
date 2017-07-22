@@ -2,7 +2,7 @@
  * Created by Wilson on 2017/6/29.
  */
 
-import React, { Component } from 'react';
+import React, { Component, PropTypes} from 'react';
 import {
     Text,
     View,
@@ -13,6 +13,18 @@ import {
     //初始化可变属性 方法二
     state = {
         size: 80,
+    }
+
+    //定义必要的属性
+    static propTypes = {
+        name: PropTypes.string.isRequired,
+        sex: PropTypes.string,
+        student: PropTypes.bool.isRequired,
+    }
+
+    //定义变量默认值
+    static defaultProps = {
+        name: 'Wilson'
     }
 
      ///state 是可变的 props是不可变的.
@@ -27,7 +39,11 @@ import {
 
     ///目前测试.jpg文件加载会报错
     render() {
+        //结构
+        const { name, student } = this.props
+
         return <View>
+            <Text>name: {name} sex: {this.props.sex} isStudent: {student.toString()}</Text>
             <Text
                 style={{fontSize: 20}}
                 onPress={()=>{

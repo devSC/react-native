@@ -16,7 +16,7 @@ export default class setup extends Component {
     render() {
         return (
             <View style={styles.container}>
-            <StateTest/>
+                <StateTest sex={'female'} student={false}/>
             </View>
         );
     }
